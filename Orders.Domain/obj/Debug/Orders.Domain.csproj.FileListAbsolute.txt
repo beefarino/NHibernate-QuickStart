@@ -1,0 +1,5 @@
+C:\SRC\NHibernate-QuickStart\Orders.Domain\bin\Debug\Orders.Domain.dll
+C:\SRC\NHibernate-QuickStart\Orders.Domain\bin\Debug\Orders.Domain.pdb
+C:\SRC\NHibernate-QuickStart\Orders.Domain\obj\Debug\ResolveAssemblyReference.cache
+C:\SRC\NHibernate-QuickStart\Orders.Domain\obj\Debug\Orders.Domain.dll
+C:\SRC\NHibernate-QuickStart\Orders.Domain\obj\Debug\Orders.Domain.pdb
