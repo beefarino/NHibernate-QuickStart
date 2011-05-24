@@ -1,5 +1,0 @@
-C:\SRC\NHibernate-QuickStart\People.Domain\bin\Debug\People.Domain.dll
-C:\SRC\NHibernate-QuickStart\People.Domain\bin\Debug\People.Domain.pdb
-C:\SRC\NHibernate-QuickStart\People.Domain\obj\Debug\ResolveAssemblyReference.cache
-C:\SRC\NHibernate-QuickStart\People.Domain\obj\Debug\People.Domain.dll
-C:\SRC\NHibernate-QuickStart\People.Domain\obj\Debug\People.Domain.pdb
