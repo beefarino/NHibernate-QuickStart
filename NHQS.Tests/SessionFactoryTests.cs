@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using NUnit.Framework;
 using People.Domain;
+using People.DataAccess;
 
 namespace NHQS.Tests
 {

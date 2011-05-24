@@ -7,6 +7,7 @@ using Orders.DataAccess;
 using People.Domain;
 using Orders.Domain;
 using NHibernate;
+using People.DataAccess;
 
 namespace NHQS.Tests
 {
