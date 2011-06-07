@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders.Domain", "Orders.Dom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders.DataAccess", "Orders.DataAccess\Orders.DataAccess.csproj", "{DEAAFD3C-3C7E-4793-BC1E-4A049A6A06C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHQS.DriveProvider", "Powershell\NHQS.DriveProvider.csproj", "{4C76C3AA-8F82-4AF6-BF19-6CE31A079899}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,10 @@ Global
 		{DEAAFD3C-3C7E-4793-BC1E-4A049A6A06C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEAAFD3C-3C7E-4793-BC1E-4A049A6A06C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEAAFD3C-3C7E-4793-BC1E-4A049A6A06C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C76C3AA-8F82-4AF6-BF19-6CE31A079899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C76C3AA-8F82-4AF6-BF19-6CE31A079899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C76C3AA-8F82-4AF6-BF19-6CE31A079899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C76C3AA-8F82-4AF6-BF19-6CE31A079899}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
