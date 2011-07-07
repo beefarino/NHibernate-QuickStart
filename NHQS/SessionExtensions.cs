@@ -169,6 +169,12 @@ namespace NHQS
             return session;
         }
 
+        public static List<T> GetAll<T>(this ISession session)
+            where T : class
+        {
+            return session.Find<T>(t=>true);
+        }
+
         public static ISession DoWithTransaction(this ISession session,
             Action<ISession> unitsOfWork)
         {

@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NHibernate.DriveProvider</RootNamespace>
     <AssemblyName>NHibernate.DriveProvider</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -75,7 +75,7 @@
     </Reference>
     <Reference Include="System.Management.Automation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Program Files\Reference Assemblies\Microsoft\WindowsPowerShell\v1.0\System.Management.Automation.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\v1.0\System.Management.Automation.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -87,10 +87,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Drive.cs" />
+    <Compile Include="NHQSDrive.cs" />
     <Compile Include="DriveParameters.cs" />
+    <Compile Include="Items\ClassMetadata.cs" />
+    <Compile Include="Items\DomainPathNode.cs" />
+    <Compile Include="Items\SessionFactory.cs" />
+    <Compile Include="Paths\ClassMetadataNodeFactory.cs" />
+    <Compile Include="Paths\DomainPathNodeProcessor.cs" />
+    <Compile Include="Paths\EntityObjectNodeFactory.cs" />
+    <Compile Include="Paths\SessionFactoryNodeFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Provider.cs" />
+    <Compile Include="NHQSProvider.cs" />
+    <Compile Include="QueryHelper.cs" />
+    <Compile Include="SessionExtensions.cs" />
+    <Compile Include="Utility\ClassMetadataExtensions.cs" />
+    <Compile Include="Utility\ConnectionStringConfigurationHacker.cs" />
+    <Compile Include="Utility\DynamicParametersFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -116,19 +128,20 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CodeOwls.PowerShell.Paths\CodeOwls.PowerShell.Paths.csproj">
+      <Project>{ED0453C7-C25A-4354-AC7A-046846D5E7FF}</Project>
+      <Name>CodeOwls.PowerShell.Paths</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CodeOwls.PowerShell.Provider\CodeOwls.PowerShell.Provider.csproj">
+      <Project>{B352375B-7C58-4943-95C0-14871E17A208}</Project>
+      <Name>CodeOwls.PowerShell.Provider</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NHQS\NHQS.csproj">
       <Project>{B94DF5CE-BF61-4B76-A915-06F5ABB8DBDE}</Project>
       <Name>NHQS</Name>
     </ProjectReference>
-    <ProjectReference Include="..\People.DataAccess\People.DataAccess.csproj">
-      <Project>{E47857FE-A585-422F-A1D0-96BE9E8734F6}</Project>
-      <Name>People.DataAccess</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\People.Domain\People.Domain.csproj">
-      <Project>{81A6468B-39D0-457C-8897-F8180D93D931}</Project>
-      <Name>People.Domain</Name>
-    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -138,7 +151,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>copy "$(SolutionDir)GeekNight.Core\bin\Debug\GeekNight.Core.dll" "$(TargetDir)GeekNight.Core.dll"
-copy "$(SolutionDir)GeekNight.Core\bin\Debug\GeekNight.Domain.dll" "$(TargetDir)GeekNight.Domain.dll"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>

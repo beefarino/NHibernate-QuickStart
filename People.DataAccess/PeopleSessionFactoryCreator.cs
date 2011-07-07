@@ -29,7 +29,7 @@ namespace People.DataAccess
                     .ExposeConfiguration(config =>
                         {
                             new SchemaExport(config).Create(true, true);
-                        })
+                        })                        
                     .BuildSessionFactory();
 
             return ret;

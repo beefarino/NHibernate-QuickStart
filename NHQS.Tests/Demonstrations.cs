@@ -18,8 +18,7 @@ namespace NHQS.Tests
             SessionFactoryContainer.Current.Add(
                 new PeopleSessionFactoryCreator().Create());
 
-            SessionFactoryContainer.Current.Add(
-                new OrdersSessionFactoryCreator().Create());
+            SessionFactoryContainer.Current.Add(new OrdersSessionFactoryCreator().Create());
 
             SessionFactory
                 .For<Person>()

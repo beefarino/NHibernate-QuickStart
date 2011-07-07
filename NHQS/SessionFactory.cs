@@ -9,6 +9,31 @@ namespace NHQS
 {
     public static class SessionFactory
     {
+        public static ISessionFactory For( Type type )
+        {
+            ISessionFactory ret = null;
+
+            SessionFactoryContainer.Current.SessionFactories.ForEach(factory =>
+            {
+                if (ret == null)
+                {
+                    factory
+                        .GetAllClassMetadata()
+                        .ToList()
+                            .ForEach(keyValuePair =>
+                            {
+                                AbstractEntityPersister val =
+                                    keyValuePair.Value as AbstractEntityPersister;
+
+                                if (val.EntityType.ReturnedClass.Equals(type))
+                                    ret = factory;
+                            });
+                }
+            });
+
+            return ret;
+        }
+
         public static ISessionFactory For<T>()
         {
             ISessionFactory ret = null;
